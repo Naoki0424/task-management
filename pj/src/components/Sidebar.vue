@@ -1,0 +1,9 @@
+<template>
+  <div>
+      <div>チーム名</div>
+      <div>タスク管理</div>
+      <div>マスタメンテ</div>
+      <div>チーム名</div>
+      <div>チーム名</div>
+  </div>
+</template>

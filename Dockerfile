@@ -7,11 +7,14 @@ WORKDIR /app
 #vuecliインストール
 RUN npm install -g @vue/cli
 
-#shファイルをコンテナにコピー
-COPY ./scripts/docker.start.sh /scripts/start.sh
+#firebaseインストール
+# RUN npm install -g firebase-tools
 
-#shフォルダの権限追加（全員実行可）
-RUN chmod +x /scripts/*
+# #shファイルをコンテナにコピー
+# COPY ./scripts/start.sh /scripts/start.sh
 
-#初期実行
+# #shフォルダの権限追加（全員実行可）
+# RUN chmod +x /scripts/*
+
+# #初期実行
 # ENTRYPOINT [ "/scripts/start.sh" ]

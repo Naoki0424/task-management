@@ -12,6 +12,9 @@ services:
     #コンテナ詳細
     app:
         image: vuecli:1
+        #-it
+        stdin_open: true
+        tty: true
         build:
             context: .
             dockerfile: Dockerfile
@@ -26,6 +29,4 @@ services:
             #コンテナ内の指定ディレクトリをホスト側と同期
             - .:/app/
 
-        #-it
-        stdin_open: true
-        tty: true
+

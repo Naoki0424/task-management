@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <sidebar class="sidebar"/>
-    <board class="msin"/>
+    <board class="work"/>
   </div>
 </template>
 

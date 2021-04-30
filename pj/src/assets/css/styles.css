@@ -1,5 +1,5 @@
   html {
-    background: rgb(170, 216, 253);
+    background: #fffffa;
     font-family: 'Avenir', Helvetica, Arial, 'system-ui', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -12,21 +12,22 @@
   body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
   }
   
   header {
-    background: rgb(170, 216, 253);
-    height: 70px;
+    height: 5%;
     color: rgb(0, 0, 0);
     font-style: italic;
     font-size: 40px;
     text-align: left;
-    padding: 20px;
+    /* padding: 20px; */
   }
   
   main {
     width:  100%;
-    height: 100%;
+    height: 95%;
+    overflow-x: auto;
   }
   
   .info-line {
@@ -188,7 +189,7 @@
     width:340px;
     /* min-height:980px; */
     height: 100%;
-    background-color:#ffffff;
+    background-color:#fffffa;
     float: left;
     /* margin-top:10px; */
     overflow-y: scroll;
@@ -196,6 +197,7 @@
 
   .work {
     margin-left:350px;
+    height: 100%;
   }
 
   #app {

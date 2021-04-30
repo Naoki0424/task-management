@@ -1,81 +1,70 @@
 <template>
   <div>
-      <div class="sidebar-header">チーム名</div>
-      <div class="sidebar-main">
-        <div>・アイウエオ1</div>
-        <div>・アイウエオ2</div>
-        <div>・アイウエオ3</div>
-        <div>・アイウエオ4</div>
-        <div>・アイウエオ5</div>
-        <div>・アイウエオ6</div>
-        <div>・アイウエオ7</div>
-        <div>・アイウエオ8</div>
-        <div>・アイウエオ9</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
-        <div>・アイウエオ</div>
+      <div class="sidebar-header">
+        <div class="sidebar-closebuttun-area">
+          <div class="sidebar-closebuttun">⭐️</div>
+        </div>
+        <div class="sidebar-title-area">
+          <div class="sidebar-title">チーム名A</div>
+        </div>
       </div>
-
+      <div class="sidebar-main">
+      <sidebar-item v-for="(item, index) in items"
+              :key="index"
+              :itemTitle="item.name"
+      />
+      </div>
   </div>
 </template>
 
+<script>
+import SidebarItem from './SidebarItem.vue'
+
+export default {
+  data: function() {
+    return {
+      items: [
+        { name: 'スプリントプランニング' },
+        { name: 'タスク管理' },
+        { name: 'スプリントプロスペクティブ' },
+        { name: 'マスタメンテ' },
+      ]
+    }
+  },
+  components: {
+    SidebarItem
+  },
+}
+</script>
+
 <style>
+.sidebar-closebuttun-area{
+  height: 30px;
+}
+.sidebar-closebuttun{
+  margin: 0 0 0 auto;
+  height: 30px;
+  width: 30px;
+}
+.sidebar-title-area{
+  margin-top: 10px;
+  height: 110px;
+}
+.sidebar-title{
+  font-size: 25px;
+  height: 110px;
+}
 .sidebar-header{
-  background: rgb(123, 183, 201);
   /* display: flex;
   padding: 60px 20px; */
   position: fixed;
   /* justify-content: space-between; */
   width: 325px;
   height: 150px;
+  background-color:#fffffa;
+  border-bottom: medium solid #dddadd;
 }
 .sidebar-main {
-  margin-top: 150px;
-  background: rgb(173, 233, 188);
+  margin-top: 160px;
 }
 </style>

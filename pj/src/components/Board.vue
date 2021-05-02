@@ -49,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .list-index {
+    display: flex;
+  }
+</style>

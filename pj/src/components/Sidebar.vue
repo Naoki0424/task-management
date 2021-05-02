@@ -8,7 +8,7 @@
           <div class="sidebar-title">チーム名A</div>
         </div>
       </div>
-      <div class="sidebar-main">
+      <div class="sidebar-contents">
       <sidebar-item v-for="(item, index) in items"
               :key="index"
               :itemTitle="item.name"
@@ -38,33 +38,30 @@ export default {
 </script>
 
 <style>
-.sidebar-closebuttun-area{
-  height: 30px;
-}
-.sidebar-closebuttun{
-  margin: 0 0 0 auto;
-  height: 30px;
-  width: 30px;
-}
-.sidebar-title-area{
-  margin-top: 10px;
-  height: 110px;
-}
-.sidebar-title{
-  font-size: 25px;
-  height: 110px;
-}
-.sidebar-header{
-  /* display: flex;
-  padding: 60px 20px; */
-  position: fixed;
-  /* justify-content: space-between; */
-  width: 325px;
-  height: 150px;
-  background-color:#fffffa;
-  border-bottom: medium solid #dddadd;
-}
-.sidebar-main {
-  margin-top: 160px;
-}
+  .sidebar-closebuttun-area{
+    height: 30px;
+  }
+  .sidebar-closebuttun{
+    margin: 0 0 0 auto;
+    height: 30px;
+    width: 30px;
+  }
+  .sidebar-title-area{
+    margin-top: 10px;
+    height: 110px;
+  }
+  .sidebar-title{
+    font-size: 25px;
+    height: 110px;
+  }
+  .sidebar-header{
+    position: fixed;
+    width: 325px;
+    height: 150px;
+    background-color:#fffffa;
+    border-bottom: medium solid #dddadd;
+  }
+  .sidebar-contents {
+    margin-top: 160px;
+  }
 </style>

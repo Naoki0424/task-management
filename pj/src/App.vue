@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <sidebar class="sidebar"/>
-    <board class="work"/>
+    <sidebar class="sidebar-container"/>
+    <board class="main-container"/>
   </div>
 </template>
 
@@ -17,3 +17,18 @@ export default {
   }
 }
 </script>
+
+<style>
+  .sidebar-container {
+    width:340px;
+    height: 100%;
+    background-color:#fffffa;
+    float: left;
+    overflow-y: scroll;
+  }
+
+  .main-container {
+    margin-left:350px;
+    height: 100%;
+  }
+</style>>

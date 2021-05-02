@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     classList() {
-      const classList = ['addlist']
+      const classList = ['']
       if (this.isEditing) {
         classList.push('active')
       }
@@ -53,3 +53,14 @@ export default {
   }
 }
 </script>
+
+<style>
+  .add-list {
+    margin: 0 10px auto;
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 320px;
+    width: 320px;
+  }
+</style>

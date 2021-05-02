@@ -3,7 +3,7 @@
     <button class="close-button" @click="removeCardFromList">
       ×
     </button>
-    <div class="body">
+    <div class="card-body">
       {{ body }}
     </div>
   </div>
@@ -34,3 +34,22 @@ export default {
   },
 }
 </script>
+
+<style>
+  .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    padding: 30px 15px 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 260px;
+    cursor: pointer;
+  }
+  .card-body {
+    font-size: 18px;
+    width: 100%;
+    word-wrap: break-word;
+  }
+</style>

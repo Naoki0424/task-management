@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     classList() {
-      const classList = ['addcard']
+      const classList = ['']
       if (this.isEditing) {
         classList.push('active')
       }
@@ -56,3 +56,14 @@ export default {
   }
 }
 </script>
+
+<style>
+  .add-card {
+    margin: 0 10px auto;
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 320px;
+    width: 320px;
+  }
+</style>

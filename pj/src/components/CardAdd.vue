@@ -71,8 +71,8 @@ export default {
     display: inline-block;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 290px;
-    width: 290px;
+    // min-width: 290px;
+    // width: 290px;
   }
 
   .add-button {

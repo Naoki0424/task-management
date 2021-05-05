@@ -64,7 +64,7 @@ export default {
   }
 
   .add-list {
-    margin: 0 5px auto;
+    margin: 0 $list-space auto;
     display: inline-block;
     flex-direction: column;
     align-items: flex-start;

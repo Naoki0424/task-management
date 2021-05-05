@@ -62,7 +62,7 @@ export default {
   @import '@/assets/css/commonStylesList';
 
   .list {
-    margin: 0 5px auto;
+    margin: 0 $list-space auto;
     position: relative;
     display: inline-block;
     flex-direction: column;

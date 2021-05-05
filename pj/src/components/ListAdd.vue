@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     classList() {
-      const classList = ['addlist']
+      const classList = ['add-list']
       if (this.isEditing) {
         classList.push('active')
       }
@@ -53,3 +53,26 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @import '@/assets/css/commonStylesScss';
+  @import '@/assets/css/commonStylesList';
+  @import '@/assets/css/commonMixinTaskBoard';
+  
+  .text-input {
+    @include textInput();
+  }
+
+  .add-list {
+    margin: 0 $list-space auto;
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: $list-width + $padding + $padding;
+    width: $list-width + $padding + $padding;
+  }
+
+  .add-button {
+    @include addButton();
+  }
+</style>

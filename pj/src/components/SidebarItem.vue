@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <div class="item-title">{{ itemTitle }}</div>
+  <div id="sidebar-item">
+      <div class="sidebar-item-title">{{ itemTitle }}</div>
   </div>
 </template>
 
@@ -15,18 +15,20 @@ export default {
 }
 </script>
 
-<style>
-.item-title{
-    font-size: 20px;
-    height: 50px;
-    cursor: pointer;
-    transition: color 0.3s;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+<style lang="scss">
+#sidebar-item {
+    .sidebar-item-title{
+        font-size: 20px;
+        height: 50px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
 
-.item-title:hover {
-	color: rgb(1, 215, 243);
-	text-decoration: inherit;
+    .sidebar-item-title:hover {
+        color: rgb(1, 215, 243);
+        text-decoration: inherit;
+    }
 }
 </style>

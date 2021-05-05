@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     classList() {
-      const classList = ['addcard']
+      const classList = ['add-card']
       if (this.isEditing) {
         classList.push('active')
       }
@@ -56,3 +56,26 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @import '@/assets/css/commonStylesScss';
+  @import '@/assets/css/commonStylesList';
+  @import '@/assets/css/commonMixinTaskBoard';
+  
+  .text-input {
+    @include textInput();
+  }
+
+  .add-card {
+    // margin: 0 0px auto;
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    // min-width: 290px;
+    // width: 290px;
+  }
+
+  .add-button {
+    @include addButton();
+  }
+</style>

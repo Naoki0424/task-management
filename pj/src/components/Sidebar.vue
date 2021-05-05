@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-closebuttun-area">
           <div class="sidebar-closebuttun">⭐️</div>
@@ -8,7 +8,7 @@
           <div class="sidebar-title">チーム名A</div>
         </div>
       </div>
-      <div class="sidebar-main">
+      <div class="sidebar-contents">
       <sidebar-item v-for="(item, index) in items"
               :key="index"
               :itemTitle="item.name"
@@ -25,7 +25,7 @@ export default {
     return {
       items: [
         { name: 'スプリントプランニング' },
-        { name: 'タスク管理' },
+        { name: 'タスクボード' },
         { name: 'スプリントプロスペクティブ' },
         { name: 'マスタメンテ' },
       ]
@@ -37,34 +37,44 @@ export default {
 }
 </script>
 
-<style>
-.sidebar-closebuttun-area{
-  height: 30px;
-}
-.sidebar-closebuttun{
-  margin: 0 0 0 auto;
-  height: 30px;
-  width: 30px;
-}
-.sidebar-title-area{
-  margin-top: 10px;
-  height: 110px;
-}
-.sidebar-title{
-  font-size: 25px;
-  height: 110px;
-}
-.sidebar-header{
-  /* display: flex;
-  padding: 60px 20px; */
-  position: fixed;
-  /* justify-content: space-between; */
-  width: 325px;
-  height: 150px;
-  background-color:#fffffa;
-  border-bottom: medium solid #dddadd;
-}
-.sidebar-main {
-  margin-top: 160px;
-}
+<style lang="scss">  
+  @import '@/assets/css/commonStylesScss';
+  // サイドバーの幅
+  $sidebar-width: $sidebar-width - $scroll-width;
+  // サイドバーのヘッダーの幅
+  $sidebar-header-heght: 150px;
+  // クローズボタンの高さ
+  $sidebar-closebuttun-area-heght: 30px;
+  // クローズボタンの幅
+  $sidebar-closebuttun-area-width: 30px;
+  // タイトルの高さ
+  $sidebar-title-area-heght: 120px;
+
+  #sidebar {
+    .sidebar-header{
+      position: fixed;
+      width: $sidebar-width;
+      height: $sidebar-header-heght;
+      border-bottom: medium solid $color-gray;
+    }
+    .sidebar-closebuttun-area{
+      height: $sidebar-closebuttun-area-heght;
+    }
+    .sidebar-closebuttun{
+      margin: 0 0 0 auto;
+      height: $sidebar-closebuttun-area-heght;
+      width: $sidebar-closebuttun-area-width;
+    }
+    .sidebar-title-area{
+      margin-top: $margin-10px;
+      height: $sidebar-title-area-heght - $margin-10px;
+    }
+    .sidebar-title{
+      font-size: 25px;
+      height: $sidebar-title-area-heght - $margin-10px;
+    }
+    .sidebar-contents {
+      margin-top: $sidebar-header-heght + $margin-10px;
+    }
+  }
 </style>

@@ -57,25 +57,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import '@/assets/css/commonStylesScss';
+  @import '@/assets/css/commonStylesList';
+
   .list {
     margin: 0 5px auto;
     position: relative;
     display: inline-block;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 290px;
-    width: 290px;
-    background-color: #e0e0e0;
+    min-width: $list-width;
+    width: $list-width;
+    background-color: $color-gray;
     border-radius: 8px;
-    padding: 15px;
-    border: solid #ddd 1px;
-    color: gray;
+    padding: $padding;
     vertical-align: top;
   }
   
   .list-header {
-    width: 290px;
+    width: $list-width;
     display: inline-flex;
     justify-content: space-between;
   }
@@ -83,12 +84,12 @@ export default {
   .list-title {
     font-size: 20px;
     font-weight: bold;
-    padding: 15px;
+    padding: $padding;
   }
   
   .list-total {
-    color: rgb(0, 140, 255);
-    padding: 15px;
+    color: $color-blue;
+    padding: $padding;
   }
   
   .delete-list {
@@ -96,10 +97,12 @@ export default {
     top: 6px;
     right: 14px;
     font-size: 28px;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
   }
   
-  .delete-list:hover {
-    opacity: 0.8;
-    cursor: pointer;
-  }
+
 </style>

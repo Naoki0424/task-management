@@ -1,0 +1,46 @@
+@mixin addButton() {
+    margin-top: 15px;
+    padding: 15px 18px;
+    background-color: #999;
+    border: none;
+    border-radius: 8px;
+    font-family: "Noto Sans Japanese", "Noto Sans", 'system-ui', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .addable & {
+      background-color: #00d78f;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+}
+
+@mixin textInput() {
+  padding: 20px 15px;
+  width: calc(100% - 30px);
+  background-color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: "Noto Sans Japanese", "Noto Sans", 'system-ui', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #242424;
+  cursor: pointer;
+  overflow: overlay;
+
+  &:focus {
+    outline: 0;
+    cursor: initial;
+  }
+
+  .active &{
+    background-color: #fff;
+  }
+}

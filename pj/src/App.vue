@@ -18,17 +18,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import '@/assets/css/commonStylesScss';
+
   .sidebar-container {
-    width:340px;
+    width: $sidebar-width;
     height: 100%;
-    background-color:#fffffa;
+    background-color: $color-white;
     float: left;
     overflow-y: scroll;
   }
 
   .main-container {
-    margin-left:350px;
+    margin-left: $sidebar-width + $margin-10px;
     height: 100%;
   }
 </style>>

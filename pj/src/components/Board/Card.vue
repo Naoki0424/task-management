@@ -52,4 +52,18 @@ export default {
     width: 100%;
     word-wrap: break-word;
   }
+
+  .close-button {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 8px;
+  border-color: red;
+  border-style: solid;
+  background-color: red;
+  color: white;
+  margin: 5px;
+}
 </style>

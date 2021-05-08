@@ -73,6 +73,7 @@ export default {
     border-radius: 8px;
     padding: $padding;
     vertical-align: top;
+    height: 100%
   }
   
   .list-header {

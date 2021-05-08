@@ -1,6 +1,6 @@
 <template>
   <div id="sidebar-item">
-      <div class="sidebar-item-title">{{ itemTitle }}</div>
+      <div class="sidebar-item-title" @click="toPage">{{ itemTitle }}</div>
   </div>
 </template>
 
@@ -10,7 +10,20 @@ export default {
         itemTitle: {
             type: String,
             required: true
+        }, 
+        itemId: {
+            type: String,
+            required: true
+        },   
+        path: {
+            type: String,
+            required: true
         },     
+    },
+    methods: {
+        toPage() {
+            this.$router.push(this.path);
+        }
     }
 }
 </script>

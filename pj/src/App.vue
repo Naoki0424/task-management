@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <sidebar class="sidebar-container"/>
-    <board class="main-container"/>
+    <!-- <board class="main-container"/> -->
+    <router-view class="main-container"/>
   </div>
 </template>
 
 <script>
-import Board from './components/Board.vue'
-import Sidebar from './components/Sidebar.vue'
+import Sidebar from './components/Sidebar/Sidebar.vue'
 
 export default {
   name: 'app',
   components: {
-    Board,
     Sidebar
   }
 }
@@ -27,10 +26,13 @@ export default {
     background-color: $color-white;
     float: left;
     overflow-y: scroll;
+    
   }
 
   .main-container {
     margin-left: $sidebar-width + $margin-10px;
     height: 100%;
+    overflow-y: scroll;
+    background-color: $color-white;
   }
 </style>>

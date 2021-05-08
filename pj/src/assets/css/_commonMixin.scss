@@ -9,6 +9,6 @@
 
 @mixin main() {
     width:  100%;
-    height: 700px;
+    height: 860px; // サイドバーの高さに合わせている。後で書き方を修正する
     overflow-x: auto;
 }
